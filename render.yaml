@@ -2,5 +2,9 @@ services:
   - type: web
     name: secode
     env: node
+    plan: free
     buildCommand: "npm install"
     startCommand: "npm start"
+     envVars:
+      - key: GREMINI_API_KEY
+        value: AIzaSyDETmkersJ2uzrF2oJFIUc0Ox-5W5gCcPM
