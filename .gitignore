@@ -1,2 +1,32 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Environment variables
 .env
-node_modules
+
+# Production build
+dist/
+
+# IDE settings
+.vscode/
+.idea/
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# MacOS files
+.DS_Store
+
+# Render config
+render.yaml
