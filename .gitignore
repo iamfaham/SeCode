@@ -11,6 +11,7 @@ npm-debug.log*
 
 # Production build
 dist/
+out
 
 # IDE settings
 .vscode/
@@ -28,3 +29,6 @@ jspm_packages/
 # MacOS files
 .DS_Store
 
+# Extension specific
+.vscode-test/
+*.vsix
