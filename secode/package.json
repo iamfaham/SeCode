@@ -2,16 +2,15 @@
   "name": "secode",
   "displayName": "SeCode",
   "description": "An extension to analyze code for security vulnerabilities",
-  "version": "0.0.1",
+  "version": "0.0.6",
+  "publisher": "iamfaham",
   "engines": {
     "vscode": "^1.91.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [
-    "onCommand:secode.analyzeCode"
-  ],
+  "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -29,6 +28,9 @@
     "lint": "eslint src --ext ts",
     "test": "vscode-test"
   },
+  "dependencies": {
+    "axios": "^0.21.4"
+  },
   "devDependencies": {
     "@types/mocha": "^10.0.7",
     "@types/node": "20.x",
@@ -37,8 +39,11 @@
     "@typescript-eslint/parser": "^7.11.0",
     "@vscode/test-cli": "^0.0.9",
     "@vscode/test-electron": "^2.4.0",
-    "axios": "^0.21.4",
     "eslint": "^8.57.0",
     "typescript": "^5.4.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iamfaham/SeCode"
   }
 }

@@ -6,6 +6,7 @@ export function activate(context: vscode.ExtensionContext) {
     vscode.window.showInformationMessage('Activating extension "secode"...');
 
     let disposable = vscode.commands.registerCommand('secode.analyzeCode', async () => {
+        console.log('Command secode.analyzeCode executed'); // Add this log to verify command execution
         const editor = vscode.window.activeTextEditor;
         if (editor) {
             const document = editor.document;
@@ -17,7 +18,6 @@ export function activate(context: vscode.ExtensionContext) {
                 const suggestions = response.data.suggestions;
                 vscode.window.showInformationMessage(`Security Analysis: ${suggestions}`);
             } catch (error: any) {
-                // Handle 'error' as an AxiosError or any other known type
                 if (axios.isAxiosError(error)) {
                     vscode.window.showErrorMessage(`Axios error: ${error.message}`);
                     console.error(`Axios error: ${error.message}`);
