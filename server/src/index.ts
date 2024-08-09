@@ -22,9 +22,9 @@ app.post('/analyze', async (req, res) => {
 
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-    const prompt = `Analyze the following code for security vulnerabilities and provide feedback:
+    const prompt = `Analyze the following code for security vulnerabilities and provide feedback in under 500 words:
         \n\n${code}\n\n 
-        Just say "looks good" or "seems correct" if the code is correct.`;
+        Just say "looks good" or "seems correct" if the code does not have any vulnerabilities. List out all the Vulnerabilities depending upon severity.`;
 
     const result = await model.generateContent(prompt);
     const response = await result.response;
