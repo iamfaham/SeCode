@@ -3,6 +3,7 @@ import axios from 'axios';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import cors from 'cors';
 
 
 dotenv.config();
@@ -14,6 +15,7 @@ const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 
 
 app.use(bodyParser.json());
+app.use(cors());
 
 app.post('/analyze', async (req, res) => {
   const { code } = req.body;
