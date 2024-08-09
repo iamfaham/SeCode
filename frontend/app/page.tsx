@@ -50,7 +50,7 @@ export default function Home() {
           <div className="bg-white p-6 rounded shadow-lg max-w-md w-full">
             <h2 className="text-2xl font-bold mb-4">About Me</h2>
             <p className="mb-4">
-              Hi, I'm Syed Mohammed Faham, a Full Stack Developer. 
+              Hi, I&apos;m Syed Mohammed Faham, a Full Stack Developer. 
               This code is just a test website for the backend of 
               SeCode: the VScode extension for checking security flaws in your code.
               For any feedback or suggestions, contact me at <Link href="https://www.linkedin.com/in/iamfaham" className='underline italic'>LinkedIn</Link>.
